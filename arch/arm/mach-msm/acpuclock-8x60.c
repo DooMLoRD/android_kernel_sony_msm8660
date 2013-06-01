@@ -1085,7 +1085,7 @@ static __init struct clkctl_acpu_speed *select_freq_plan(void)
 	max_khz = 2052000;
 	pr_info("ACPU PVS: Ultimate OC\n");
 #else
-	max_khz = 1728000;
+	max_khz = 1512000;
 	pr_info("ACPU PVS: OC\n");
 #endif
  
