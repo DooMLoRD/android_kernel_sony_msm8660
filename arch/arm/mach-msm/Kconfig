@@ -1592,12 +1592,18 @@ config MSM_DALRPC_TEST
 config CPU_VOLTAGE_TABLE
 	bool "Enable CPU Voltage Table via sysfs for adjustements"
 	default n
-
+ 
 config OC_ULTIMATE
 	bool "allow 2.052 GHz max OC option"
 	default n
 	help
 	  Unlock the ultimate Overclock freq speed @ 2.052 GHz
+
+config GPU_OVERCLOCK
+	bool "allow GPU overclock"
+	default n
+	help
+	  Allow GPU overclocking
 
 if CPU_FREQ_MSM
 
