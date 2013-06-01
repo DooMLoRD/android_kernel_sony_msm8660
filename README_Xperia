@@ -1,0 +1,8 @@
+Configuration files can be found in arch/arm/configs.
+
+ Xperia S LT26i => fuji_nozomi_defconfig
+ Xperia SL  LT26ii => fuji_nozomi2_defconfig
+ Xperia acro S LT26w => fuji_hikari_row_defconfig
+ Xperia ion LT28h => fuji_aoba_defconfig
+ Xperia ion LT28i => fuji_aoba_defconfig
+
