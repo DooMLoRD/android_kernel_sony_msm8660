@@ -1593,6 +1593,12 @@ config CPU_VOLTAGE_TABLE
 	bool "Enable CPU Voltage Table via sysfs for adjustements"
 	default n
 
+config OC_ULTIMATE
+	bool "allow 2.052 GHz max OC option"
+	default n
+	help
+	  Unlock the ultimate Overclock freq speed @ 2.052 GHz
+
 if CPU_FREQ_MSM
 
 config MSM_CPU_FREQ_SET_MIN_MAX
