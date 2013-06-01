@@ -1,0 +1,5 @@
+cd ../vendor/broadcom/wlan/dhd/linux
+ARCH=arm CROSS_COMPILE=~/arm-linux-androideabi-4.7/bin/arm-linux-androideabi- LINUXDIR=~/android/sony_msm8660_kernel/android_kernel_sony_msm8660/kernel LINUXVER=3.4.0 make
+cp ~/android/sony_msm8660_kernel/android_kernel_sony_msm8660/vendor/broadcom/wlan/dhd/linux/dhd-android/bcm4330.ko ~/android/sony_msm8660_kernel/android_kernel_sony_msm8660/final_files/.
+cp ~/android/sony_msm8660_kernel/android_kernel_sony_msm8660/vendor/broadcom/wlan/dhd/linux/dhd-android/bcm4330.ko.stripped ~/android/sony_msm8660_kernel/android_kernel_sony_msm8660/final_files/.
+ARCH=arm CROSS_COMPILE=~/arm-linux-androideabi-4.7/bin/arm-linux-androideabi- make clean
