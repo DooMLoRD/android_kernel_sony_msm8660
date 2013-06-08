@@ -50,7 +50,7 @@ enum kgsl_ctx_reset_stat {
 };
 
 #ifdef CONFIG_GPU_OVERCLOCK
-#define KGSL_MAX_PWRLEVELS 6
+#define KGSL_MAX_PWRLEVELS 7
 #else
 #define KGSL_MAX_PWRLEVELS 5
 #endif

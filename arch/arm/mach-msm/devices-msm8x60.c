@@ -812,6 +812,11 @@ static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 #ifdef CONFIG_GPU_OVERCLOCK
 		{
 			.gpu_freq = 320000000,
+			.bus_freq = 6,
+			.io_fraction = 0,
+		},
+		{
+			.gpu_freq = 300000000,
 			.bus_freq = 5,
 			.io_fraction = 0,
 		},
@@ -843,7 +848,7 @@ static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 	},
 	.init_level = 0,
 #ifdef CONFIG_GPU_OVERCLOCK
-	.num_levels = 6,
+	.num_levels = 7,
 #else
 	.num_levels = 5,
 #endif
