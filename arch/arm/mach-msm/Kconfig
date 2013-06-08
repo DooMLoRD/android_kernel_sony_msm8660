@@ -1605,6 +1605,13 @@ config GPU_OVERCLOCK
 	help
 	  Allow GPU overclocking
 
+config FORCE_FAST_CHARGE
+	bool "Force AC charge mode at will"
+	default n
+	help
+		A simple sysfs interface to force adapters that
+		are detected as USB to charge as AC.
+
 config MSM_CPUFREQ_LIMITER
 	tristate "MSM CPU frequency limiter"
 	default n
