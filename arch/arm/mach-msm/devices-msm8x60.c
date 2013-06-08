@@ -659,6 +659,25 @@ static struct msm_bus_vectors grp3d_nominal_low_vectors[] = {
 	},
 };
 
+#ifdef CONFIG_GPU_OVERCLOCK
+static struct msm_bus_vectors grp3d_nominal_high_vectors[] = {
+	{
+		.src = MSM_BUS_MASTER_GRAPHICS_3D,
+		.dst = MSM_BUS_SLAVE_EBI_CH0,
+		.ab = 0,
+		.ib = KGSL_CONVERT_TO_MBPS(2484),
+	},
+};
+
+static struct msm_bus_vectors grp3d_max_vectors[] = {
+	{
+		.src = MSM_BUS_MASTER_GRAPHICS_3D,
+		.dst = MSM_BUS_SLAVE_EBI_CH0,
+		.ab = 0,
+		.ib = KGSL_CONVERT_TO_MBPS(2976),
+	},
+};
+#else
 static struct msm_bus_vectors grp3d_nominal_high_vectors[] = {
 	{
 		.src = MSM_BUS_MASTER_GRAPHICS_3D,
@@ -676,6 +695,7 @@ static struct msm_bus_vectors grp3d_max_vectors[] = {
 		.ib = KGSL_CONVERT_TO_MBPS(2484),
 	},
 };
+#endif
 
 static struct msm_bus_paths grp3d_bus_scale_usecases[] = {
 	{
