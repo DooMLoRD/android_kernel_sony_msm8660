@@ -1501,7 +1501,7 @@ int tcp_recvmsg(struct kiocb *iocb, struct sock *sk, struct msghdr *msg,
 				break;
 
 			offset = *seq - TCP_SKB_CB(skb)->seq;
-			if (tcp_hdr(skb)->syn)
+			if (tcp_hdr(skb)->syn && (offset > 0))
 				offset--;
 			if (offset < skb->len)
 				goto found_ok_skb;
@@ -1572,8 +1572,10 @@ int tcp_recvmsg(struct kiocb *iocb, struct sock *sk, struct msghdr *msg,
 
 			tp->ucopy.len = len;
 
+			/*
 			WARN_ON(tp->copied_seq != tp->rcv_nxt &&
 				!(flags & (MSG_PEEK | MSG_TRUNC)));
+			*/
 
 			/* Ugly... If prequeue is not empty, we have to
 			 * process it before releasing socket, otherwise

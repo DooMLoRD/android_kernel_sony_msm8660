@@ -255,7 +255,7 @@ static int __devinit kp_probe(struct platform_device *pdev)
 			dt->keys[i].state = !rc;
 			input_report_key(dt->input, dt->keys[i].code, !rc);
 		}
-		rc = request_threaded_irq(dt->keys[i].irq, NULL, kp_irq,
+		rc = request_irq(dt->keys[i].irq, kp_irq,
 				IRQF_TRIGGER_RISING | IRQF_TRIGGER_FALLING |
 				IRQF_DISABLED, KP_NAME, &dt->input->dev);
 		if (rc < 0) {
